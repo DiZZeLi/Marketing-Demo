@@ -2,7 +2,7 @@
 
 App flow
 
-## Tranding Screen
+## Targeting Screen
 ![Detail flow 1](/screenshots/targeting.png)
 
 ## Channels Screen
