@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.vb.marketing_demo.ui.targeting.TargetingFragment"
+        android:label="HomeFragment" >
+        <argument
+        android:name="channels"
+        app:argType="com.vb.marketing_demo.ui.targeting.model.TargetingUI[]" />
+        <action
+            android:id="@+id/action_homeFragment_to_channelsFragment"
+            app:destination="@id/channelsFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/main_graph"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/channelsFragment"
+        android:name="com.vb.marketing_demo.ui.channels.ChannelsFragment"
+        android:label="ChannelsFragment" >
+
+        <action
+            android:id="@+id/action_channelsFragment_to_campaignsFragment"
+            app:destination="@id/campaignsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/campaignsFragment"
+        android:name="com.vb.marketing_demo.ui.campaigns.CampaignsFragment"
+        android:label="CampaignsFragment" >
+        <action
+            android:id="@+id/action_campaignsFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/main_graph"
+            app:popUpToInclusive="true"/>
+        <argument
+            android:name="plans"
+            app:argType="com.vb.marketing_demo.ui.campaigns.model.PlanUI[]"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.vb.marketing_demo.ui.summary.SummaryFragment"
+        android:label="SummaryFragment" >
+        <action
+            android:id="@+id/action_summaryFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/main_graph"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
