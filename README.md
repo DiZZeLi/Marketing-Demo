@@ -3,13 +3,13 @@
 App flow
 
 ## Tranding Screen
-![Detail flow 1](/screenshots/targeting.jpg)
+![Detail flow 1](/screenshots/targeting.png)
 
 ## Channels Screen
-![Detail flow 1](/screenshots/channels.jpg)
+![Detail flow 1](/screenshots/channels.png)
 
 ## Plans Screen
-![Detail flow 1](/screenshots/plans.jpg)
+![Detail flow 1](/screenshots/plans.png)
 
 ## Summary Screen
-![Detail flow 1](/screenshots/summary.jpg)
+![Detail flow 1](/screenshots/summary.png)
