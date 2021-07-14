@@ -10,8 +10,7 @@ import com.vb.marketing_demo.utils.state.DataState
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
-class CampaignViewModel : ViewModel() {
-    private val repo = MainRepository()
+class CampaignViewModel(private val repo : MainRepository) : ViewModel() {
 
     private val _channelsData = MutableLiveData<DataState<List<ChannelUI>>>()
     val channelsData: LiveData<DataState<List<ChannelUI>>>

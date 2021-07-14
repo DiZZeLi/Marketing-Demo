@@ -13,14 +13,20 @@ import com.vb.marketing_demo.R
 import com.vb.marketing_demo.const.CHANNELS_ID_BUNDLE_TAG
 import com.vb.marketing_demo.const.PLANS_BUNDLE_TAG
 import com.vb.marketing_demo.databinding.FragmentCampaignsBinding
+import com.vb.marketing_demo.repository.MainRepository
 import com.vb.marketing_demo.ui.campaigns.adapter.CampaignsAdapter
 import com.vb.marketing_demo.ui.campaigns.model.PlanUI
 import com.vb.marketing_demo.ui.channels.model.ChannelUI
+import com.vb.marketing_demo.utils.factory.MainViewModelFactory
 import com.vb.marketing_demo.utils.state.DataState
 
 class CampaignsFragment : Fragment(R.layout.fragment_campaigns) {
 
-    private val campaignViewModel: CampaignViewModel by viewModels()
+    private val campaignViewModel: CampaignViewModel by viewModels {
+        MainViewModelFactory(
+            repo = MainRepository()
+        )
+    }
     private var _binding: FragmentCampaignsBinding? = null
     private val binding get() = _binding!!
 

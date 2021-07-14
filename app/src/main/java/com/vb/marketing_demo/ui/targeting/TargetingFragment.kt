@@ -4,20 +4,26 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.vb.marketing_demo.R
 import com.vb.marketing_demo.const.CHANNELS_BUNDLE_TAG
 import com.vb.marketing_demo.databinding.FragmentHomeBinding
+import com.vb.marketing_demo.repository.MainRepository
 import com.vb.marketing_demo.ui.targeting.adapter.TargetingAdapter
 import com.vb.marketing_demo.ui.targeting.model.TargetingUI
+import com.vb.marketing_demo.utils.factory.MainViewModelFactory
 import com.vb.marketing_demo.utils.state.DataState
 
 class TargetingFragment : Fragment(R.layout.fragment_home) {
 
 
-    private val targetingViewModel: TargetingViewModel by activityViewModels()
+    private val targetingViewModel: TargetingViewModel by viewModels {
+        MainViewModelFactory(
+            repo = MainRepository()
+        )
+    }
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
