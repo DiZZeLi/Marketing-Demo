@@ -3,13 +3,14 @@
 App flow
 
 ## Targeting Screen
-![Detail flow 1](/screenshots/targeting.png)
+<img src="/screenshots/targeting.png" height="720">
 
 ## Channels Screen
-![Detail flow 1](/screenshots/channels.png)
+<img src="/screenshots/channels.png" height="720">
 
 ## Plans Screen
-![Detail flow 1](/screenshots/plans.png)
+<img src="/screenshots/plans.png" height="720">
 
 ## Summary Screen
-![Detail flow 1](/screenshots/summary.png)
+<img src="/screenshots/summary.png" height="720">
+
